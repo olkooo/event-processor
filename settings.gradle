@@ -1,0 +1,6 @@
+rootProject.name = 'events'
+include 'api'
+include 'facade'
+include 'service'
+include 'persistence'
+
