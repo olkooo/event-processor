@@ -1,23 +1,25 @@
 buildscript {
     repositories {
-        maven { url "http://repo.spring.io/libs-release" }
         mavenLocal()
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:$project.ext.springBootVersion")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
     }
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 }
 
-apply plugin: 'spring-boot'
+apply plugin:"spring-boot"
 
-description = 'api'
+
+description = "api"
 
 springBoot{
     mainClass = "org.oyatskiv.events.Application"
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-web:1.4.1.RELEASE")
     compile project(":facade")
 }

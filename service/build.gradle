@@ -1,14 +1,13 @@
 buildscript {
     repositories {
-        maven { url "http://repo.spring.io/libs-release" }
         mavenLocal()
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:$project.ext.springBootVersion")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
     }
 }
-description = 'service'
+description = "service"
 
 dependencies {
     compile project(":persistence")
